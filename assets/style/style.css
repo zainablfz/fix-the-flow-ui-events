@@ -14,7 +14,7 @@
 body {
   margin: 2rem;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   background: var(--secondary);
 }
@@ -79,3 +79,215 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+
+/* ANIMATIE 1 */
+
+/* Button 1 */
+
+a:nth-of-type(1) {
+  color: var(--primary);
+}
+
+.color {
+  background-color: pink;
+}
+
+/* Button 2 */
+
+.flip {
+  transition: 1s;
+  transform: rotateX(180deg);
+}
+
+/* Button 3 */
+
+a:nth-of-type(3).turnaround {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+/* Button 4 */
+
+.scale-animation {
+  transform: scale(1.2); /* Vergroot de link met 20% */
+  transition: transform 0.3s ease; /* Voeg een overgang toe voor een vloeiende animatie */
+  background: yellowgreen;
+}
+
+/* Button 5 */
+
+a:nth-of-type(4) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.color {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    background: pink;
+  }
+  10% {
+    background: red;
+  }
+  20% {
+    background: white;
+  }
+  30% {
+    background: yellow;
+  }
+  40% {
+    background: purple;
+  }
+  50% {
+    background: blue;
+  }
+  60% {
+    background: orange;
+  }
+  70% {
+    background: gray;
+  }
+  80% {
+    background: darkmagenta;
+  }
+  90% {
+    background: aqua;
+  }
+  100% {
+    background: green;
+  }
+}
+
+/*  Button 6 */
+
+a:nth-of-type(6) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button 7 */
+
+a:nth-of-type(7) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.fade-up {
+  animation-name: fade-up;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  33% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  66% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Button 8 */
+
+a:nth-of-type(8) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+  background: rgb(124, 231, 201);
+  background: linear-gradient(
+    40deg,
+    rgba(124, 231, 201, 1) 20%,
+    rgba(157, 123, 235, 1) 100%
+  );
+}
+
+.changeSize {
+  padding: 1rem 10rem 1rem 10rem;
+  transition: 2s ease-in-out;
+}
+
+/* Button 9 */
+
+a:nth-of-type(9) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1x;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Button 10 */
+
+a:nth-of-type(10) {
+  transition: 300ms ease-in-out;
+}
+
+a:focus {
+  outline: none;
+}
+
+.scaled {
+  border-right: 8px solid var(--highlight-primary);
+  border-bottom: 6px solid var(--highlight-primary);
+}
